@@ -1,0 +1,147 @@
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+  
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">E-learning</a>
+      </div>
+      
+        <div class="collapse navbar-collapse" id="myNavbar">
+          
+        
+      
+       <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-bell"></span> Notification</a></li>
+                <li><a href="main.html"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+   
+      </ul>
+        
+  
+      
+      <form class="navbar-form navbar-right" action="/action_page.php">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search" name="search">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+  
+      </form>
+    </div>
+    
+    </div></nav>
+
+<div class="sidebar">
+  <a style="background-color: grey"><img src="./assets/image/mentor.png"><br>Hi {{mentor}}</a>
+  <a class="active" routerLink="/mentormain">Home</a>
+  <a routerLink="/mentorcurrent">Current Course</a>
+  <a routerLink="/mentorcomplete">Completed Course</a>
+  <a href="#contact">Payment Details</a>
+  
+</div>
+
+<div class="content">
+ 
+  <h2><span class="glyphicon glyphicon-user"> About</span></h2>
+   <div class="solid">
+    <div class="row">
+    <div class="col-sm-6" >
+     <b>First Name:</b>      {{mentors.firstName}}<br>
+     <b>User Name:</b>{{mentor}}<br>
+     <b>Linkedin Url:</b>{{mentors.linkedinUrl}}<br>
+     <b>Birthday:</b>22-08-1996<br>
+
+    </div>
+    <div class="col-sm-6" >
+     <b>Last Name:</b>{{mentors.lastName}}<br>
+     <b>Email:</b>{{mentors.email}}<br>
+     <b>Country:</b>India<br>
+     <b>Phone:</b>{{mentors.contactNumber}}<br>
+</div>
+  </div>
+</div>
+  <br>
+  <h3>Skills</h3>
+  <table class="table table-striped">
+<thead>
+<tr>
+<th>Id</th>
+<th>Skill Name</th>
+<th >Prerequisites</th>
+<th colspan="1">TOC</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let skill of skills">
+<td >{{skill.id}}</td>
+<td>{{skill.name}}</td>
+<td>{{skill.prerequisites}}</td>
+<td>{{skill.toc}}</td>
+
+<td><button class="btn btn-success" (click)="toggleId()" >  {{ showId ? 'Cancel' : 'Add'}}</button>&nbsp; &nbsp;&nbsp;&nbsp;
+<button class="btn btn-danger" (click)="deleteSkill(skill)" ><span class="glyphicon glyphicon-remove"></span>Remove</button></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+<div *ngIf="showId">
+
+
+<h2 class="text-center">Add Skill</h2>
+<form>
+<div class="form-group">
+<label for="techName">Skill Name:</label>
+<input [(ngModel)]="skill.name" placeholder="Tech Name" name="name" class="form-control" id="name">
+</div>
+
+<div class="form-group">
+<label for="prerequisites">Prerequisites:</label>
+<input [(ngModel)]="skill.prerequisites" placeholder="Prerequisites" name="prerequisites" class="form-control" id="prerequisites">
+</div>
+<div class="form-group">
+<label for="toc">TOC:</label>
+<input [(ngModel)]="skill.toc" placeholder="TOC" name="toc" class="form-control" id="toc">
+</div>
+
+
+
+
+<button class="btn btn-success" (click)="createUser()">Add</button>&nbsp; &nbsp;&nbsp;
+<button class="btn btn-danger" (click)="toggleId()" >  Cancel</button>
+</form>
+
+
+
+</div>
+</div>
+   
+ 
+
+
+

@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+  }
+  
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  table {border-style: solid;}
+  .barcode{
+  font-family: 'Libre Barcode 39';font-size: 52px;
+ padding-left: 150px;}

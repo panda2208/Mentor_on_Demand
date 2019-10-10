@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration form</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+</head>
+<body>
+	<div class="container">
+
+    <form class="well form-horizontal"     style="background: #57796f52;">
+<fieldset>
+
+<!-- Form Name -->
+<legend style="text-align: center"><h2><b>Registration Form</b></h2></legend><br>
+<p class="text-info" style="text-align: center"> Create your account. It's free and only takes a minute.</p>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label for="firstName" class="col-md-4 control-label">First Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  [(ngModel)]="user.firstName" placeholder="First Name" name="firstName" class="form-control"  type="text" id="firstName">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input [(ngModel)]="user.lastName" placeholder="Last Name" name="lastName" class="form-control"  type="text" id="lastName">
+    </div>
+  </div>
+</div>
+
+  
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Username</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  [(ngModel)]="user.userName" placeholder="Username" name="userName" class="form-control"  type="text" id="userName">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Password</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input [(ngModel)]="user.password" placeholder="Password" name="password" class="form-control"  type="password">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input [(ngModel)]="user.email" placeholder="E-Mail Address" name="email" class="form-control"  type="email" id="email">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Contact No.</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input [(ngModel)]="user.contactNumber" placeholder="(+91xxxxxxxxxx)" name="contactNumber" class="form-control" type="text" id="contactNumber">
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Linkedin Url</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input [(ngModel)]="user.linkedinUrl" placeholder="xyz@Linkedin.in" name="linkedinUrl" class="form-control" type="text" id="linkedinUrl">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Year of Experience</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input [(ngModel)]="user.yearsOfExperience" placeholder="yearsOfExperience" name="yearsOfExperience" class="form-control" type="text" id="yearsOfExperience">
+    </div>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4"><br>
+   <a routerLink="/signin" ><button class="btn btn-success" (click)="createUser()" >
+      SUBMIT<span class="glyphicon glyphicon-send"></span></button></a>
+  </div>
+ <br>
+ <button type="clear" class="btn btn-warning" >CLEAR <span class="glyphicon glyphicon-trash"></span></button>
+  
+</div>
+Already a Member <a routerLink="/signin">signin</a>
+</fieldset>
+</form>
+
+</div>
+    
+</body>
+</html>

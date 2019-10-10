@@ -1,0 +1,24 @@
+
+img {
+	width:80%;
+}
+.text{
+	font-size: 50px;
+	color: black;
+	padding: 20px;
+	font-style: italic;
+	text-align: center;
+	font-family:comic sans-serif;
+
+}
+section {
+	background-color: #1b1b1b;
+	background-image: url("bg.jpg");
+	height: 100vh;
+	display: flex;
+	background-size: cover;
+	opacity: 0.9;
+	
+  }
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+</head>
+<body>
+<div class="main">
+    <div class="left">
+        <h1>Login</h1>
+        <p><i>To your Account</i></p>
+        <p class="or"><i>or</i></p>
+        <form>
+            <input type="text" [(ngModel)]="signin.userName" placeholder="UserName" name="userName" id="userName" /><br>
+            <input type="password" [(ngModel)]="signin.password"  placeholder="Password" name="password" id="password" /><br>
+            
+            <input type="submit"(click)="authenticate(signin.userName,signin.password)" value="LOG IN">
+            
+        </form>
+        <p class="forgot">Forgot Password?</p>
+
+    </div>
+    <div class="right">
+        <h1>E-Learning</h1>
+        <p><i>If you are new user</i></p>
+        <p><i>Don't forget to <b>Sign Up</b></i></p>
+        <div class="social">
+ 
+            
+<a routerLink="/signup"><button class="button"><span>Register</span></button></a>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>

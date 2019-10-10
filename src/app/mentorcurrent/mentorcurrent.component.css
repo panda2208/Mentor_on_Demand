@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+img{
+  width:50%;
+}
+.progress{
+  width: 50%;
+}
+.solid{
+  border-style: solid;
+}
+.checked {
+  color: red;
+
+}
+ table {
+  font-family: Times new Roman, serif;
+  border-collapse: collapse;
+  width: 80%;
+  color: black;
+  margin-left: 230px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 10%;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+
+}
+.progress{
+  width: 100%;
+}
+
+
+
+  
+h2{
+  text-align: center;
+  color: black;
+  font-size: 30px;
+}
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 100px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}

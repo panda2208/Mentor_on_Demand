@@ -1,0 +1,200 @@
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+  
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">E-learning</a>
+      </div>
+      
+        <div class="collapse navbar-collapse" id="myNavbar">
+          
+        
+      
+       <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-bell"></span> Notification</a></li>
+                <li><a href="main.html"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+   
+      </ul>
+        
+  
+      
+      <form class="navbar-form navbar-right" action="/action_page.php">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search" name="search">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+  
+      </form>
+    </div>
+    
+    </div></nav>
+
+<div class="sidebar">
+  <a style="background-color: grey"><img src="./assets/image/mentor.png"><br>Hi {{mentor}}</a>
+  <a class="active" routerLink="/mentormain">Home</a>
+  <a routerLink="/mentorcurrent">Current Course</a>
+  <a routerLink="/mentorcomplete">Completed Course</a>
+  <a href="#contact">Payment Details</a>
+  
+</div>
+
+<div class="content">
+ 
+  <h2><span class="glyphicon glyphicon-user"> About</span></h2>
+   <div class="solid">
+    <div class="row">
+    <div class="col-sm-6" >
+     <b>First Name:</b>      {{mentors.firstName}}<br>
+     <b>User Name:</b>{{mentor}}<br>
+     <b>Linkedin Url:</b>{{mentors.linkedinUrl}}<br>
+     <b>Birthday:</b>22-08-1996<br>
+
+    </div>
+    <div class="col-sm-6" >
+     <b>Last Name:</b>{{mentors.lastName}}<br>
+     <b>Email:</b>{{mentors.email}}<br>
+     <b>Country:</b>India<br>
+     <b>Phone:</b>{{mentors.contactNumber}}<br>
+</div>
+  </div>
+</div>
+  <br>
+    <div class="row">
+    <div class="col-sm-4" >
+     <h2><span class="glyphicon glyphicon-education"> Education</span></h2>
+     <ul>
+  <li>B.tech in Software Engineering<br>
+    <i>(2015-2019)</i></li>
+  <li>Student at Army Public School<br>
+    <i>(2007-2014)</i></li>
+  <li>Student at Army School<br>
+<i>(2000-2006)</i></li>
+</ul>
+    </div>
+    <div class="col-sm-4" >
+    <h2><span class="glyphicon glyphicon-certificate"> Experience</span></h2>
+        <ul>
+  <li>Working at Cognizant<br>
+    <i>(2019-present)</i></li>
+  <li>Certified Photoshop<br>
+    <i>(2017-2018)</i></li>
+  <li>Certified Advance Java<br>
+<i>(2016-2018)</i></li>
+</ul>
+</div>
+<div class="col-sm-4" >
+     <h2><span class="glyphicon glyphicon-book"> Skill </span></h2>
+     Photoshop
+      <div class="progress">
+    <div class="progress-bar progress-bar-success " role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:90%"></div></div>
+       Web designing
+      <div class="progress">
+    <div class="progress-bar progress-bar-info " role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:60%"></div></div>
+       Java Developer
+      <div class="progress">
+    <div class="progress-bar progress-bar-success " role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+      </div></div>
+      <p><i class="glyphicon glyphicon-plus-sign"> Add Skill</i></p>
+    </div>
+    </div>
+
+  
+   <br>
+   <div class="row">
+ 
+    <div class="col-sm-12" >
+     <h2><span class="glyphicon glyphicon-education"> Overall Rating</span></h2>
+    
+     <span class="fa fa-star checked"></span>
+     <span class="fa fa-star checked"></span>
+     <span class="fa fa-star checked"></span>
+     <span class="fa fa-star checked"></span>
+     <span class="fa fa-star"></span>
+     <p>4.1 average based on 254 reviews.</p>
+    
+     
+     <div class="row">
+       <div class="side">
+         <div>5 star</div>
+       </div>
+       <div class="middle">
+         <div class="bar-container">
+           <div class="bar-5"></div>
+         </div>
+       </div>
+       <div class="side right">
+         <div>150</div>
+       </div>
+       <div class="side">
+         <div>4 star</div>
+       </div>
+       <div class="middle">
+         <div class="bar-container">
+           <div class="bar-4"></div>
+         </div>
+       </div>
+       <div class="side right">
+         <div>63</div>
+       </div>
+       <div class="side">
+         <div>3 star</div>
+       </div>
+       <div class="middle">
+         <div class="bar-container">
+           <div class="bar-3"></div>
+         </div>
+       </div>
+       <div class="side right">
+         <div>15</div>
+       </div>
+       <div class="side">
+         <div>2 star</div>
+       </div>
+       <div class="middle">
+         <div class="bar-container">
+           <div class="bar-2"></div>
+         </div>
+       </div>
+       <div class="side right">
+         <div>6</div>
+       </div>
+       <div class="side">
+         <div>1 star</div>
+       </div>
+       <div class="middle">
+         <div class="bar-container">
+           <div class="bar-1"></div>
+         </div>
+       </div>
+       <div class="side right">
+         <div>20</div>
+       </div>
+     </div>
+     </div>
+
+   
+ 
+
+
+

@@ -1,0 +1,15 @@
+html{
+	background-image: linear-gradient(to right,#1f7ecacc,white);
+}
+img {
+	width:80%;
+}
+.text{
+	font-size: 50px;
+	color: black;
+	padding: 20px;
+	font-style: italic;
+	text-align: center;
+
+
+}
